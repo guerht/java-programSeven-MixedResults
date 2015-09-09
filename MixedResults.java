@@ -47,10 +47,10 @@ public class MixedResults {
 
 		/*
 		 * Math class methods: 
-		 * Math.abs(x); //abssolute value (int,double)
-		 * Math.pow(x,y); //exponent (x to the power of y)
-		 * Math.sqrt(x); //square root (double)
-		 * Math.ceil(x); //ceiling (the next highest whole number)
+		 * Math.abs(x); // abssolute value (int,double)
+		 * Math.pow(x,y); // exponent (x to the power of y)
+		 * Math.sqrt(x); // square root (double)
+		 * Math.ceil(x); // ceiling (the next highest whole number)
 		 * Math.floor(x); // Floor (the next lowest whole number)
 		 * Math.min(x,y); // minimum value of x or y;
 		 * Math.max(x,y); // maximum value of x or y;
@@ -69,5 +69,30 @@ public class MixedResults {
 		System.out.println(Math.round(99.5));
 		System.out.println(Math.random()+"\t"+Math.random());
 		System.out.println(Math.PI);
+
+		// MODIFIED 9 SEP 2015
+		/* 
+		 * Other Math methods
+		 * Math.log(x); // log base e of x
+		 * Math.sin(x); // sine of angle x in radians
+		 * Math.cos(x); // cosine of angle x in radians
+		 * Math.tan(x); // tangent of x in radians
+		 * Math.asin(x); // arcsine of x in range -PI/2 to PI/2
+		 * Math.acos(x); // arccosine of x in range -PI/2 to PI/2
+		 * Math.atan(x); // arctan of x in range -PI/2 to PI/2
+		 * Math.toDegrees(x); // converts radians to degrees
+		 * Math.toRadians(x); // converts degrees to radians
+		 */
+
+		/*
+		 * Project: ComputeThis
+		 *
+		 * Print: d1 = 3PIsin(187deg) + |cos(122deg)| = -0.61867223758067
+		 * Print: d2 = (14.72)^3.801 + ln72 = 27496.988867001543
+		 */
+		double d10 = 3 * Math.PI * Math.sin(Math.toRadians(187)) + Math.abs(Math.cos(Math.toRadians(122)));
+		double d20 = Math.pow(14.72,3.801) + Math.log(72);
+		System.out.println("d1 = " + d10);
+		System.out.println("d2 = " + d20);
 	}
 }
